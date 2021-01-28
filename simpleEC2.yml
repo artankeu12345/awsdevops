@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple EC2 instance by Ariane
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-04d29b6f966df1537 # nothern virginia linux2
+      InstanceType: t2.micro
+      Tags:
+        - Key: Name
+          Value: Ariane EC2 Instance
+        - Key: Type
+          Value: Worker Instance

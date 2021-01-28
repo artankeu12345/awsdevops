@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+ policy to create a simple group
+Resources:
+  Group:
+      Type: AWS::IAM::Group
+      Properties: 
+         GroupName: AfricanFinancialGroupSecurityTeam
+         ManagedPolicyArns: 
+          - arn:aws:iam::aws:policy/AdministratorAccess
+         #Policies: 
+          #- Policy
+
+Outputs:
+  Group:
+    Description: GroupName
+    Value: !Ref Group
+    Export:
+      Name: !Sub '${AWS::StackName}-Group'
+  
+
+
+
+ 

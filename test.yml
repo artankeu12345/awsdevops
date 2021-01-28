@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0e4035ae3f70c400f # Amazon Linux AMI in N.California
+      Tags:
+        - Key: Name
+          Value: Ariane EC2 Instance
+        - Key: Type
+          Value: Worker Instance

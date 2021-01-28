@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+ policy to create a simple user in a group
+Resources:
+  Group:
+      Type: AWS::IAM::Group
+      Properties: 
+         GroupName: AfricanFinancialGroupSecurityTeam
+         ManagedPolicyArns: 
+          - arn:aws:iam::aws:policy/AdministratorAccess
+         #Policies: 
+          #- Policy
+  user:
+      Type: AWS::IAM::User
+      Properties: 
+          Groups: 
+           - !Ref Group
+          LoginProfile: 
+            Password: N2G@uditing
+          #ManagedPolicyArns: 
+           #- String
+  
+ 
+           #Policies: 
+            #- Policy
+          # Tags: 
+           #- Tag
+          UserName: Ariane

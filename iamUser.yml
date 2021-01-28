@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+ policy to create a simple user 
+Resources:
+  user:
+      Type: AWS::IAM::User
+      Properties: 
+          Groups: 
+            - Fn::ImportValue: iamGroup-Group
+          LoginProfile: 
+            Password: N2G@uditing
+          #ManagedPolicyArns: 
+           #- String
+  
+ 
+           #Policies: 
+            #- Policy
+          # Tags: 
+           #- Tag
+          UserName: Ariane
